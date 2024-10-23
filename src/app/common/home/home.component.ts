@@ -4,12 +4,12 @@ import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 // import { ApiService } from '../../api.service';
-// import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule],
+  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
