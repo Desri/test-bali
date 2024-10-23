@@ -29,16 +29,10 @@ export class AppComponent {
         label: 'Lifestyle'
       },
       {
-        label: 'Bisnis'
-      },
-      {
-        label: 'Editorial'
+        label: 'Movies'
       },
       {
         label: 'World'
-      },
-      {
-        label: 'Opinion'
       },
       {
         label: 'Arts'
