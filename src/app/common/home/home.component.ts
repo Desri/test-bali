@@ -3,13 +3,13 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
-import { ApiService } from '../../api.service';
-import { CommonModule } from '@angular/common';
+// import { ApiService } from '../../api.service';
+// import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule, CommonModule],
+  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -21,14 +21,15 @@ export class HomeComponent {
   listArticleWorld: any[] = [];
   listArticleArts: any[] = [];
 
+  key = 'U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe';
   apiUrl = 'https://api.nytimes.com/svc/topstories/v2';
 
-  constructor(private apiService: ApiService) {}
+  // constructor(private apiService: ApiService) {}
 
   ngOnInit() {
 
     const fetchDataFinancial = () => {
-      fetch(`${this.apiUrl}/business.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/business.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleFinancial = data.results
@@ -37,12 +38,12 @@ export class HomeComponent {
           }, 13000);
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
 
     const fetchDataTekno = () => {
-      fetch(`${this.apiUrl}/technology.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/technology.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleTechnology = data.results
@@ -51,12 +52,12 @@ export class HomeComponent {
           }, 13000);
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
 
     const fetchDataFashion = () => {
-      fetch(`${this.apiUrl}/fashion.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/fashion.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleFashion = data.results
@@ -65,12 +66,12 @@ export class HomeComponent {
           }, 13000);
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
 
     const fetchDataMovie = () => {
-      fetch(`${this.apiUrl}/movies.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/movies.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleMovies = data.results
@@ -79,12 +80,12 @@ export class HomeComponent {
           }, 13000);
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
 
     const fetchDataWorld = () => {
-      fetch(`${this.apiUrl}/world.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/world.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleWorld = data.results
@@ -93,18 +94,18 @@ export class HomeComponent {
           }, 13000);
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
     
     const fetchDataArts = () => {
-      fetch(`${this.apiUrl}/arts.json?api-key=U6A0LAGE8qtj0uoX3nAMun2MU2sOegIe`)
+      fetch(`${this.apiUrl}/arts.json?api-key=${this.key}`)
         .then(response => response.json())
         .then(data => {
           this.listArticleArts = data.results
         })
         .catch(error => {
-          console.error('Error:', error); // Menangani error
+          console.error('Error:', error);
         });
     }
 
