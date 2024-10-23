@@ -32,7 +32,7 @@ export class AppComponent {
         label: 'Bisnis'
       },
       {
-        label: 'Otomotif'
+        label: 'Editorial'
       },
       {
         label: 'World'
