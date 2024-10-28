@@ -17,25 +17,32 @@ export class AppComponent {
   ngOnInit() {
     this.items = [
       {
-        label: 'Home'
+        label: 'Home',
+        url: '/'
       },
       {
-        label: 'Finansial'
+        label: 'Finansial',
+        url: '/finansial'
       },
       {
-        label: 'Tekno'
+        label: 'Tekno',
+        url: '/tekno'
       },
       {
-        label: 'Lifestyle'
+        label: 'Lifestyle',
+        url: '/lifestyle'
       },
       {
-        label: 'Movies'
+        label: 'Movies',
+        url: '/movies'
       },
       {
-        label: 'World'
+        label: 'World',
+        url: '/world'
       },
       {
-        label: 'Arts'
+        label: 'Arts',
+        url: '/arts'
       }
     ]
   }

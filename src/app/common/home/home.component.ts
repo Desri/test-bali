@@ -3,13 +3,14 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { ImageModule } from 'primeng/image';
 import { CardModule } from 'primeng/card';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { SkeletonModule } from 'primeng/skeleton';
 // import { ApiService } from '../../api.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule, CommonModule],
+  imports: [RouterLink, RouterOutlet, ImageModule, CardModule, ScrollPanelModule, SkeletonModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -35,7 +36,7 @@ export class HomeComponent {
           this.listArticleFinancial = data.results
           setTimeout(() => {
             fetchDataTekno()
-          }, 13000);
+          }, 5000);
         })
         .catch(error => {
           console.error('Error:', error);
@@ -49,7 +50,7 @@ export class HomeComponent {
           this.listArticleTechnology = data.results
           setTimeout(() => {
             fetchDataFashion()
-          }, 13000);
+          }, 5000);
         })
         .catch(error => {
           console.error('Error:', error);
@@ -63,7 +64,7 @@ export class HomeComponent {
           this.listArticleFashion = data.results
           setTimeout(() => {
             fetchDataMovie()
-          }, 13000);
+          }, 5000);
         })
         .catch(error => {
           console.error('Error:', error);
@@ -77,7 +78,7 @@ export class HomeComponent {
           this.listArticleMovies = data.results
           setTimeout(() => {
             fetchDataWorld()
-          }, 13000);
+          }, 5000);
         })
         .catch(error => {
           console.error('Error:', error);
@@ -91,7 +92,7 @@ export class HomeComponent {
           this.listArticleWorld = data.results
           setTimeout(() => {
             fetchDataArts()
-          }, 13000);
+          }, 5000);
         })
         .catch(error => {
           console.error('Error:', error);
