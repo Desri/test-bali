@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## For Deployment to Vercel
+
+In this test, I use Vercel for the server.
+This is step by step deploy this application to Vercel
+1. Create an account in Vercel
+2. Create new project in the Vercel
+3. Connect your repository to the Vercel
+4. Build your application on Vercel
+5. and then wait few minutes untuil your application finish build.
+
+
